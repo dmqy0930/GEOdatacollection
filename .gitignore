@@ -1,0 +1,15 @@
+# Output data (generated at runtime)
+data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
