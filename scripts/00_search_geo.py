@@ -8,7 +8,7 @@ downloaded file, ready for 01_extract_gse.py.
 
 Usage:
   # Direct query string
-  python 00_search_geo.py '(((eCLIP) AND Homo sapiens[Organism]) AND ("2022/07/01"[Publication Date] : "2022/12/31"[Publication Date]))'
+  python 00_search_geo.py '(((RNA-seq) AND (Homo sapiens[Organism]) AND ("2026/01/01"[Publication Date] : "2026/12/31"[Publication Date]))'
 
   # Read query from file
   python 00_search_geo.py --query-file query.txt
