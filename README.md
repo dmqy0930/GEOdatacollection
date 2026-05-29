@@ -27,7 +27,7 @@ pip install requests
 
 ```bash
 # From a GEO search query
-./run.sh --query '(((eCLIP) AND Homo sapiens[Organism]) AND ("2022/07/01"[Publication Date] : "2022/12/31"[Publication Date]))'
+./run.sh --query '(((RNA-seq) AND (Homo sapiens[Organism]) AND ("2026/01/01"[Publication Date] : "2026/12/31"[Publication Date]))'
 
 # From an existing txt file
 ./run.sh /path/to/geo_results.txt
@@ -105,12 +105,12 @@ The final `summary.csv` contains 15 columns, one row per sample (GSM):
 | **sample_title** | Sample name from GEO | GEO |
 | **GSM** | GEO Sample accession | GEO |
 | **cell_line_tissue** | Cell line / tissue source | GEO source_name / characteristics |
-| **是否有其他干扰** | Perturbation keywords (siRNA, sgRNA, CRISPR, DMSO, etc.) | GEO sample_title |
-| **数据类型** | Data type (CLIP-seq, RNA-seq, ChIP-seq, etc.) | SRA LibraryStrategy + GEO |
-| **相关的其他GSE数据** | Related GSE (SuperSeries/SubSeries) | GEO |
-| **PMID期刊名称** | Journal name | PubMed |
-| **发表年度** | Publication year | PubMed |
-| **文献标题** | Article title | PubMed |
+| **pertubation** | Perturbation keywords (siRNA, sgRNA, CRISPR, DMSO, etc.) | GEO sample_title |
+| **data type** | Data type (CLIP-seq, RNA-seq, ChIP-seq, etc.) | SRA LibraryStrategy + GEO |
+| **related GSE** | Related GSE (SuperSeries/SubSeries) | GEO |
+| **PMID** | Journal name | PubMed |
+| **publication year** | Publication year | PubMed |
+| **title** | Article title | PubMed |
 
 ## Individual Scripts
 
