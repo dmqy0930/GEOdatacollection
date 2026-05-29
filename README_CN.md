@@ -27,7 +27,7 @@ pip install requests
 
 ```bash
 # 从 GEO 搜索查询开始
-./run.sh --query '(((eCLIP) AND Homo sapiens[Organism]) AND ("2022/07/01"[Publication Date] : "2022/12/31"[Publication Date]))'
+./run.sh --query '(((RNA-seq) AND (Homo sapiens[Organism]) AND ("2026/01/01"[Publication Date] : "2026/12/31"[Publication Date]))'
 
 # 从已有 txt 文件开始
 ./run.sh /path/to/geo_results.txt
@@ -96,15 +96,15 @@ GEOdatacollection/
 
 | 列 | 说明 | 数据来源 |
 |---|---|---|
-| **GSE** | GEO Series 序列号 | GEO |
-| **SRP** | SRA Study 序列号 | SRA |
-| **SRR** | SRA Run 序列号 | SRA |
-| **data_publication_year** | 数据公开年份（从 GEO Status 提取） | GEO |
-| **data_collected_date** | 数据收集日期（`YYYY/MM/DD`） | SRA ReleaseDate |
-| **is_single_end** | `SE`（单端）或 `PE`（双端） | SRA LibraryLayout |
-| **sample_title** | 样本名称 | GEO |
-| **GSM** | GEO Sample 序列号 | GEO |
-| **cell_line_tissue** | 细胞系/组织来源 | GEO source_name / characteristics |
+| **GSE号码** | GEO Series 序列号 | GEO |
+| **SRP号码** | SRA Study 序列号 | SRA |
+| **SRR号码** | SRA Run 序列号 | SRA |
+| **数据公布时间** | 数据公开年份（从 GEO Status 提取） | GEO |
+| **收集时间** | 数据收集日期（`YYYY/MM/DD`） | SRA ReleaseDate |
+| **测序类型** | `SE`（单端）或 `PE`（双端） | SRA LibraryLayout |
+| **样本介绍** | 样本名称 | GEO |
+| **GSM号码** | GEO Sample 序列号 | GEO |
+| **来源** | 细胞系/组织来源 | GEO source_name / characteristics |
 | **是否有其他干扰** | 干扰关键词（siRNA, sgRNA, CRISPR, DMSO 等） | GEO sample_title |
 | **数据类型** | 数据类型（CLIP-seq, RNA-seq, ChIP-seq 等） | SRA LibraryStrategy + GEO |
 | **相关的其他GSE数据** | 关联的 GSE（SuperSeries/SubSeries） | GEO |
